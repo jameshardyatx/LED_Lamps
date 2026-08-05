@@ -5,7 +5,7 @@ import math
 
 LED_PIN    = 0
 BUTTON_PIN = 27
-NUM_LEDS   = 10
+NUM_LEDS   = 15
 
 np     = neopixel.NeoPixel(machine.Pin(LED_PIN), NUM_LEDS)
 button = machine.Pin(BUTTON_PIN, machine.Pin.IN, machine.Pin.PULL_UP)

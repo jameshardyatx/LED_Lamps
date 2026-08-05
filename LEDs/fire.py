@@ -5,7 +5,7 @@ import math
 
 LED_PIN    = 0
 BUTTON_PIN = 27
-NUM_LEDS   = 10
+NUM_LEDS   = 15
 
 np     = neopixel.NeoPixel(machine.Pin(LED_PIN), NUM_LEDS)
 button = machine.Pin(BUTTON_PIN, machine.Pin.IN, machine.Pin.PULL_UP)
@@ -75,7 +75,7 @@ last_press = 0
 tick       = 0
 
 # Tuning knobs
-SMOOTH      = 0.25   # how fast intensity tracks its target (0=frozen, 1=instant)
+SMOOTH      = 0.05   # how fast intensity tracks its target (0=frozen, 1=instant, .25=default)
 JOLT_MIN    = 1      # minimum ticks before a new random target is chosen
 JOLT_MAX    = 6      # maximum ticks (low = rapid flicker)
 FLARE_PROB  = 0.08   # probability per tick of a sudden full-brightness flare

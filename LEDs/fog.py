@@ -5,7 +5,7 @@ import math
 
 LED_PIN    = 0
 BUTTON_PIN = 27
-NUM_LEDS   = 10
+NUM_LEDS   = 15
 
 np     = neopixel.NeoPixel(machine.Pin(LED_PIN), NUM_LEDS)
 button = machine.Pin(BUTTON_PIN, machine.Pin.IN, machine.Pin.PULL_UP)
@@ -25,7 +25,7 @@ PALETTE = [
     (0x23, 0x4A, 0x59),  # deep shadow
 ]
 
-BRIGHTNESS = 0.9   # fog is never harsh; keep it dim and diffuse
+BRIGHTNESS = 0.01   # fog is never harsh; keep it dim and diffuse
 
 def lerp_color(a, b, t):
     t = max(0.0, min(1.0, t))
